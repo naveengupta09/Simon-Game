@@ -21,7 +21,13 @@ document.addEventListener("keydown", startGame);
 document.addEventListener("click", (evt) => {
     // ignore click that is not on a game button
     if (!evt.target.classList.contains("btn")) return;
-    startGame();
+    // if this click is only to start, stop it from counting as a user move
+    if (!started) {
+        startGame();
+        evt.preventDefault();
+        evt.stopPropagation();
+        evt.stopImmediatePropagation();
+    }
 }, true);
 
 function btnFlash(btn) {
