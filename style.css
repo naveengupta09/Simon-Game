@@ -8,6 +8,7 @@ body{
     border-radius: 20%;
     border: 10px solid black;
     margin: 2.5rem;
+    cursor: pointer;
 }
 
 .btn-container{
@@ -37,4 +38,8 @@ body{
 
 .userflash{
     background-color: green;
+}
+
+.game-over{
+    background-color: red;
 }
